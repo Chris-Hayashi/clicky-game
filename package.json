@@ -1,7 +1,6 @@
 {
-  "name": "memorygame"
-  "homepage": "http://chris-hayashi.github.io/clicky-game"
-  "name": "client",
+  "name": "clicky-game",
+  "homepage": "http://chris-hayashi.github.io/clicky-game",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
