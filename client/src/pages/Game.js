@@ -13,9 +13,9 @@ class Game extends Component {
     };
 
     sortCards = imageArray => {
-        imageArray.sort(() => Math.random - 0.5);
+        imageArray.sort(() => Math.random() - 0.5);
         for (let i = 0; imageArray.length; i++) {
-            array[i].id = i;
+            imageArray[i].id = i;
         }
     }
 
@@ -65,19 +65,19 @@ class Game extends Component {
                 </div>
 
                 <div>
-                    
+
                 </div>
 
                 <div>
                     <Wrapper>
-                        {this.state.images.map(image => {
+                        {this.state.images.map(image => (
                             <Card
                                 id={image.id}
                                 clicked={image.clicked}
                                 image={image.image}
                                 onClick={() => this.handleBtnClick(image.id)}
                             />
-                        })}
+                        ))}
 
                     </Wrapper>
                 </div>

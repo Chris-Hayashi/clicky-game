@@ -7,6 +7,7 @@ const Card = props => {
             <img 
                 data-clicked={props.clicked}
                 src={props.image} 
+                alt={props.name}
                 className="card-image"
                 onClick={props.onClick}
             />
