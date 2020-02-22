@@ -5,10 +5,10 @@ import Game from "./pages/Game";
 
 const App = () => {
     return (
-        // <Router>
-        //     <Route exact path="/" component={Game} />
-        // </Router>
-        <Game />
+        <Router>
+            <Route exact path="/clicky-game" component={Game} />
+        </Router>
+        // <Game />
     );
 };
 

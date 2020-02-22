@@ -46,7 +46,6 @@ class Game extends Component {
                 score: 0,
                 message: "You guessed incorrectly!"
             });
-
         }
     }
 
