@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
-import Header from "./components/Header";
-import Card from "./components/Card";
-import Wrapper from "./components/Wrapper";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Game from "./pages/Game";
+
 
 class App extends Component {
     render() {
         return (
-            <Header />
+            <Router>
+                <Route exact path="/react-gh-pages" component={Game} />
+            </Router>
             
         );
     }
