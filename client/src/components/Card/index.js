@@ -4,7 +4,12 @@ import "./style.css";
 const Card = props => {
     return(
         <div className="card">
-            <img src={props.image} className="card-image" />
+            <img 
+                data-clicked={props.clicked}
+                src={props.image} 
+                className="card-image"
+                onClick={props.onClick}
+            />
         </div>
     );
 }

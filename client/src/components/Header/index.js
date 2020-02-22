@@ -6,7 +6,7 @@ const Header = props => {
         <div className="container">
             <div className="row">
                 <div className="col-md-4">Memory Game</div>
-                <div className="col-md-4">Click an image to begin!</div>
+                <div className="col-md-4">{props.message}</div>
                 <div className="col-md-4">Score: {props.score} | Top Score: {props.topScore}</div>
             </div>
         </div>
