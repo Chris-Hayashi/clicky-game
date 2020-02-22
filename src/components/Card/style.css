@@ -1,0 +1,14 @@
+.card {
+    display: block;
+    width: 200px;
+    height: 200px;
+    border: 5px solid black;
+    -webkit-filter: drop-shadow(5px 5px 2px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+    background-image: linear-gradient(to bottom right,  #83EAF1, #63A4FF);
+}
+
+.card-image {
+    width: 90%;
+    height: 90%;
+}
