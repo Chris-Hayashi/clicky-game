@@ -1,4 +1,4 @@
-#header {
+.header {
     display: block;
     background-image: linear-gradient(to bottom right, #83EAF1, #63A4FF);
     height: 250px;

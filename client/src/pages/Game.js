@@ -14,7 +14,7 @@ class Game extends Component {
 
     sortCards = imageArray => {
         imageArray.sort(() => Math.random() - 0.5);
-        for (let i = 0; imageArray.length; i++) {
+        for (let i = 0; i < imageArray.length; i++) {
             imageArray[i].id = i;
         }
     }
@@ -26,26 +26,27 @@ class Game extends Component {
     }
 
     handleBtnClick = id => {
-        let imageArray = this.state.images
+        let imageArray = this.state.images;
         if (!imageArray[id].clicked) {
             imageArray[id].clicked = true;
-            this.sortCards(imageArray)
-            if (this.state.score >= this.state.topScore) {
+            this.sortCards(imageArray);
+            if (this.state.score >= this.state.topScore)
                 return this.setState({
                     images: imageArray,
                     score: this.state.score + 1,
                     topScore: this.state.topScore + 1,
                     message: "You guessed correctly!"
                 });
-            }
         } else {
             imageArray.map(image => image.clicked = false);
             this.sortCards(imageArray);
-            return this.setState({
+            imageArray = this.state.images;
+            this.setState({
                 images: imageArray,
                 score: 0,
                 message: "You guessed incorrectly!"
             });
+
         }
     }
 
@@ -64,15 +65,16 @@ class Game extends Component {
                     />
                 </div>
 
-                <div>
+                {/* <div>
 
-                </div>
+                </div> */}
 
                 <div>
                     <Wrapper>
                         {this.state.images.map(image => (
                             <Card
                                 id={image.id}
+                                key={image.id}
                                 clicked={image.clicked}
                                 image={image.image}
                                 onClick={() => this.handleBtnClick(image.id)}
@@ -86,4 +88,4 @@ class Game extends Component {
     }
 }
 
-export default Game
+export default Game;
